@@ -6,7 +6,9 @@
   <title>Hello World | 你好，世界</title>
   <meta name="author" content="John Doe">
   
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+  <meta name="description" content="一、清空表
+清空单表1TRUNCATE table table_name;
+清空库中所有表1select concat(&amp;#x27;TRUNCATE table &amp;#x27;,table_name,&amp;#x27;;&amp;#x27;) from information_schema.TABLES where">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -45,7 +47,7 @@
   <div class="container" id="container">
 	<div class="content">
 	  <div class="page-header">		
-  <h1><a class="brand" href="/">你好，世界</a><span class="split"></span><span class="title">Hello World</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2022-05-23</span></h1>
+  <h1><a class="brand" href="/">你好，世界</a><span class="split"></span><span class="title">Hello World</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2022-06-01</span></h1>
 </div>		
 
 <div class="row page">
@@ -58,19 +60,21 @@
 	  
 
 	  <!-- content -->
-	  <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+	  <h3 id="一、清空表"><a href="#一、清空表" class="headerlink" title="一、清空表"></a>一、清空表</h3><ol>
+<li><h4 id="清空单表"><a href="#清空单表" class="headerlink" title="清空单表"></a>清空单表</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TRUNCATE table table_name;</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="清空库中所有表"><a href="#清空库中所有表" class="headerlink" title="清空库中所有表"></a>清空库中所有表</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat(&#x27;TRUNCATE table &#x27;,table_name,&#x27;;&#x27;) from information_schema.TABLES where table_schema=&#x27;库名&#x27;;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<ul>
+<li>查询出要执行的sql语句，复制出来执行</li>
+</ul>
+</li>
+<li><p>查询库中所有表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select table_name from information_schema.tables where table_schema = &#x27;库名&#x27;;</span><br></pre></td></tr></table></figure></li>
+<li><p>查询表中所有字段</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name,column_comment </span><br><span class="line">FROM information_schema.COLUMNS </span><br><span class="line">WHERE table_name = &#x27;表名&#x27; </span><br><span class="line">AND table_schema = &#x27;库名&#x27;;</span><br></pre></td></tr></table></figure></li>
+<li><p>hjc</p>
+</li>
+</ol>
 	  
 
 	  <div>
@@ -85,20 +89,20 @@
 	
 		
 			
+			
 		
 	
 		
 			
 			
-		
+			
 	
 	
-	
-		<li class="prev"><a href="/2022/06/01/clean-table/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
 	
 	<li><a href="/"><i class="fa fa-archive"></i>Home</a></li>
 	
-		<li class="next disabled"><a>next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+		<li class="next"><a href="/2022/05/23/hello-world/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
 	
 </ul>
 </div>

@@ -5,6 +5,19 @@
     
     <entry>
       <title>Hello World</title>
+      <link href="/2022/06/01/clean-table/"/>
+      <url>/2022/06/01/clean-table/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、清空表"><a href="#一、清空表" class="headerlink" title="一、清空表"></a>一、清空表</h3><ol><li><h4 id="清空单表"><a href="#清空单表" class="headerlink" title="清空单表"></a>清空单表</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TRUNCATE table table_name;</span><br></pre></td></tr></table></figure></li><li><h4 id="清空库中所有表"><a href="#清空库中所有表" class="headerlink" title="清空库中所有表"></a>清空库中所有表</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat(&#x27;TRUNCATE table &#x27;,table_name,&#x27;;&#x27;) from information_schema.TABLES where table_schema=&#x27;库名&#x27;;</span><br></pre></td></tr></table></figure><ul><li>查询出要执行的sql语句，复制出来执行</li></ul></li><li><p>查询库中所有表</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select table_name from information_schema.tables where table_schema = &#x27;库名&#x27;;</span><br></pre></td></tr></table></figure></li><li><p>查询表中所有字段</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name,column_comment </span><br><span class="line">FROM information_schema.COLUMNS </span><br><span class="line">WHERE table_name = &#x27;表名&#x27; </span><br><span class="line">AND table_schema = &#x27;库名&#x27;;</span><br></pre></td></tr></table></figure></li><li><p>hjc</p></li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
       <link href="/2022/05/23/hello-world/"/>
       <url>/2022/05/23/hello-world/</url>
       
