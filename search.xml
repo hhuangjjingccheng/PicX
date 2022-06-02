@@ -286,4 +286,38 @@
         <category>Java</category>
       </categories>
   </entry>
+  <entry>
+    <title>Docker之jenkins安装</title>
+    <url>/2022/06/02/docker_jenkins_install/</url>
+    <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
+<li><pre><code class="shell">docker run -d -v jenkins_home:/var/jenkins_home -p 8080:8080 -p 50000:50000 --restart always jenkins/jenkins:lts-jdk11
+</code></pre>
+<ul>
+<li>所有 Jenkins 数据都位于其中 - 包括插件和配置。您可能希望将其设置为显式卷，以便可以对其进行管理并附加到另一个容器进行升级：<code>/var/jenkins_home</code></li>
+<li>这将自动在主机上创建“jenkins_home”<a href="https://docs.docker.com/storage/volumes/">docker 卷</a>。Docker 卷保留其内容，即使容器已停止、启动或删除也是如此。</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Mysql之事务锁</title>
+    <url>/2022/06/02/mysql_%E4%BA%8B%E5%8A%A1%E9%94%81/</url>
+    <content><![CDATA[<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><h3 id="Lock-wait-timeout-exceeded；-try-restarting-transaction"><a href="#Lock-wait-timeout-exceeded；-try-restarting-transaction" class="headerlink" title="Lock wait timeout exceeded； try restarting transaction"></a>Lock wait timeout exceeded； try restarting transaction</h3><ol>
+<li><p>mysql查询 正在执行的事务</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SELECT * FROM information_schema.INNODB_TRX</span><br></pre></td></tr></table></figure>
+
+<p>找到事务的线程ID（trx_mysql_thread_id）</p>
+</li>
+<li><p>杀掉线程</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">kill  线程id</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Mysql</category>
+      </categories>
+  </entry>
 </search>
