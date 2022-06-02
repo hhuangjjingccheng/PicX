@@ -7,9 +7,9 @@
   <meta name="author" content="大放厥词成">
   
   <meta name="description" content="JSON转换
-Object转List&amp;lt;&amp;gt;
 
-```javaObject data = queryJson.get(“data”);List list = JSONObject.parseArray(JSONObject.toJSONString(data), BasicMaterialD">
+Object转List&amp;lt;&amp;gt;
+12Object data = queryJson.get(&amp;quot;data&amp;quot;); List&amp;lt;BasicMaterialDTOSap&amp;gt; list = JSONObject.parseArray(JSONObject.t">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -61,12 +61,12 @@ Object转List&amp;lt;&amp;gt;
 	  
 
 	  <!-- content -->
-	  <h3 id="JSON转换"><a href="#JSON转换" class="headerlink" title="JSON转换"></a>JSON转换</h3><ol>
+	  <h3 id="JSON转换"><a href="#JSON转换" class="headerlink" title="JSON转换"></a>JSON转换</h3><hr>
+<ol>
 <li><p>Object转List&lt;&gt;</p>
-<ul>
-<li>```java<br>Object data = queryJson.get(“data”);<br>List<BasicMaterialDTOSap> list = JSONObject.parseArray(JSONObject.toJSONString(data), BasicMaterialDTOSap.class);<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 去除Json转换的 \ \</span><br><span class="line"></span><br><span class="line">   - ```java</span><br><span class="line">     Object object = JSONObject.parseObject(string);</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Object</span> <span class="variable">data</span> <span class="operator">=</span> queryJson.get(<span class="string">&quot;data&quot;</span>); </span><br><span class="line">List&lt;BasicMaterialDTOSap&gt; list = JSONObject.parseArray(JSONObject.toJSONString(data), BasicMaterialDTOSap.class);</span><br></pre></td></tr></table></figure></li>
+<li><p>去除Json转换的 \ \</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Object</span> <span class="variable">object</span> <span class="operator">=</span> JSONObject.parseObject(string);</span><br></pre></td></tr></table></figure></li>
 </ol>
 	  
 
