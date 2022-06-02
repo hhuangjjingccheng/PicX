@@ -3,17 +3,32 @@
 <head>
   <meta charset="utf-8">
   
-  <title>清空表 | 你好，世界</title>
+  <title>Gitlab之权限控制 | 你好，世界</title>
   <meta name="author" content="大放厥词成">
   
-  <meta name="description" content="一、清空表
-清空单表1TRUNCATE table table_name;
-清空库中所有表1select concat(&amp;#x27;TRUNCATE table &amp;#x27;,table_name,&amp;#x27;;&amp;#x27;) from information_schema.TABLES where">
+  <meta name="description" content="角色
+Guest
+
+可以创建issue(事务)、发表评论，不能读写版本库-访客
+
+
+Reporter
+
+可以克隆代码，不能提交，访问者可以赋予这个权限(报告者；
+
+可以理解为测试员、产品经理等，一般负责提交issue等)
+
+
+
+Developer
+
+可以克隆代码、开发、提交、push
+开发人员可以赋">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="清空表"/>
+  <meta property="og:title" content="Gitlab之权限控制"/>
   <meta property="og:site_name" content="你好，世界"/>
 
   
@@ -47,7 +62,7 @@
   <div class="container" id="container">
 	<div class="content">
 	  <div class="page-header">		
-  <h1><a class="brand" href="/">你好，世界</a><span class="split"></span><span class="title">清空表</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2022-06-01</span></h1>
+  <h1><a class="brand" href="/">你好，世界</a><span class="split"></span><span class="title">Gitlab之权限控制</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2022-06-02</span></h1>
 </div>		
 
 <div class="row page">
@@ -60,19 +75,36 @@
 	  
 
 	  <!-- content -->
-	  <h3 id="一、清空表"><a href="#一、清空表" class="headerlink" title="一、清空表"></a>一、清空表</h3><ol>
-<li><h4 id="清空单表"><a href="#清空单表" class="headerlink" title="清空单表"></a>清空单表</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TRUNCATE table table_name;</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="清空库中所有表"><a href="#清空库中所有表" class="headerlink" title="清空库中所有表"></a>清空库中所有表</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat(&#x27;TRUNCATE table &#x27;,table_name,&#x27;;&#x27;) from information_schema.TABLES where table_schema=&#x27;库名&#x27;;</span><br></pre></td></tr></table></figure>
-
+	  <h2 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h2><ol>
+<li><p>Guest</p>
 <ul>
-<li>查询出要执行的sql语句，复制出来执行</li>
+<li>可以创建issue(事务)、发表评论，不能读写版本库-访客</li>
 </ul>
 </li>
-<li><p>查询库中所有表</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select table_name from information_schema.tables where table_schema = &#x27;库名&#x27;;</span><br></pre></td></tr></table></figure></li>
-<li><p>查询表中所有字段</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name,column_comment </span><br><span class="line">FROM information_schema.COLUMNS </span><br><span class="line">WHERE table_name = &#x27;表名&#x27; </span><br><span class="line">AND table_schema = &#x27;库名&#x27;;</span><br></pre></td></tr></table></figure></li>
-<li><p>hjc</p>
+<li><p>Reporter</p>
+<ul>
+<li><p>可以克隆代码，不能提交，访问者可以赋予这个权限(报告者；</p>
+</li>
+<li><p>可以理解为测试员、产品经理等，一般负责提交issue等)</p>
+</li>
+</ul>
+</li>
+<li><p>Developer</p>
+<ul>
+<li>可以克隆代码、开发、提交、push</li>
+<li>开发人员可以赋予这个权限(开发者; 负责开发)</li>
+</ul>
+</li>
+<li><p>Master</p>
+<ul>
+<li>可以创建项目、添加tag、保护分支、添加项目成员、编辑项目</li>
+<li>核心负责人可以赋予这个权限(一般是组长，负责对Master分支进行维护)</li>
+</ul>
+</li>
+<li><p>Owner</p>
+<ul>
+<li>可以设置项目访问权限 - Visibility Level、删除项目、迁移项目、git赋予这个权限(拥有者; 一般是项目经理)</li>
+</ul>
 </li>
 </ol>
 	  
@@ -94,20 +126,20 @@
 		
 	
 		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
 			
 			
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
 		
 	
 		

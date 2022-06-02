@@ -3,17 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>清空表 | 你好，世界</title>
+  <title>常用命令 | 你好，世界</title>
   <meta name="author" content="大放厥词成">
   
-  <meta name="description" content="一、清空表
-清空单表1TRUNCATE table table_name;
-清空库中所有表1select concat(&amp;#x27;TRUNCATE table &amp;#x27;,table_name,&amp;#x27;;&amp;#x27;) from information_schema.TABLES where">
+  <meta name="description" content="常用命令
+搜索docker镜像
+1docker search  name
+
+name:需要搜索的镜像名称
+
+拉取（下载）需要的镜像
+1docker pull name
+查看所有镜像
+1docker images
+查看所有容器
+1docker ps -a">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="清空表"/>
+  <meta property="og:title" content="常用命令"/>
   <meta property="og:site_name" content="你好，世界"/>
 
   
@@ -47,7 +56,7 @@
   <div class="container" id="container">
 	<div class="content">
 	  <div class="page-header">		
-  <h1><a class="brand" href="/">你好，世界</a><span class="split"></span><span class="title">清空表</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2022-06-01</span></h1>
+  <h1><a class="brand" href="/">你好，世界</a><span class="split"></span><span class="title">常用命令</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2022-06-02</span></h1>
 </div>		
 
 <div class="row page">
@@ -60,20 +69,18 @@
 	  
 
 	  <!-- content -->
-	  <h3 id="一、清空表"><a href="#一、清空表" class="headerlink" title="一、清空表"></a>一、清空表</h3><ol>
-<li><h4 id="清空单表"><a href="#清空单表" class="headerlink" title="清空单表"></a>清空单表</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TRUNCATE table table_name;</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="清空库中所有表"><a href="#清空库中所有表" class="headerlink" title="清空库中所有表"></a>清空库中所有表</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat(&#x27;TRUNCATE table &#x27;,table_name,&#x27;;&#x27;) from information_schema.TABLES where table_schema=&#x27;库名&#x27;;</span><br></pre></td></tr></table></figure>
+	  <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ol>
+<li><p>搜索docker镜像</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker search  name</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>查询出要执行的sql语句，复制出来执行</li>
-</ul>
+<p>name:需要搜索的镜像名称</p>
 </li>
-<li><p>查询库中所有表</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select table_name from information_schema.tables where table_schema = &#x27;库名&#x27;;</span><br></pre></td></tr></table></figure></li>
-<li><p>查询表中所有字段</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name,column_comment </span><br><span class="line">FROM information_schema.COLUMNS </span><br><span class="line">WHERE table_name = &#x27;表名&#x27; </span><br><span class="line">AND table_schema = &#x27;库名&#x27;;</span><br></pre></td></tr></table></figure></li>
-<li><p>hjc</p>
-</li>
+<li><p>拉取（下载）需要的镜像</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull name</span><br></pre></td></tr></table></figure></li>
+<li><p>查看所有镜像</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure></li>
+<li><p>查看所有容器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure></li>
 </ol>
 	  
 
@@ -88,7 +95,11 @@
 	
 	
 		
+			
+		
 	
+		
+			
 		
 	
 		
@@ -96,13 +107,15 @@
 		
 	
 		
-	
+			
 		
 	
 		
-	
+			
 		
 	
+		
+			
 		
 	
 		
@@ -112,9 +125,13 @@
 	
 		
 	
+		
+	
+		
 	
 	
-		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+		<li class="prev"><a href="/2022/06/02/docker_%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
 	
 	<li><a href="/"><i class="fa fa-archive"></i>Home</a></li>
 	

@@ -3,17 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>清空表 | 你好，世界</title>
+  <title>Docker之基础命令 | 你好，世界</title>
   <meta name="author" content="大放厥词成">
   
-  <meta name="description" content="一、清空表
-清空单表1TRUNCATE table table_name;
-清空库中所有表1select concat(&amp;#x27;TRUNCATE table &amp;#x27;,table_name,&amp;#x27;;&amp;#x27;) from information_schema.TABLES where">
+  <meta name="description" content="查看所有容器 
+1docker ps -a
+
+
+CONTAINER ID: 容器 ID。
+
+IMAGE: 使用的镜像。
+
+COMMAND: 启动容器时运行的命令。
+
+CREATED: 容器的创建时间。
+
+STATUS: 容器状态。
+状态有7种：
+
+created（已创建）restarting（重启中">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="清空表"/>
+  <meta property="og:title" content="Docker之基础命令"/>
   <meta property="og:site_name" content="你好，世界"/>
 
   
@@ -47,7 +60,7 @@
   <div class="container" id="container">
 	<div class="content">
 	  <div class="page-header">		
-  <h1><a class="brand" href="/">你好，世界</a><span class="split"></span><span class="title">清空表</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2022-06-01</span></h1>
+  <h1><a class="brand" href="/">你好，世界</a><span class="split"></span><span class="title">Docker之基础命令</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2022-06-02</span></h1>
 </div>		
 
 <div class="row page">
@@ -60,20 +73,39 @@
 	  
 
 	  <!-- content -->
-	  <h3 id="一、清空表"><a href="#一、清空表" class="headerlink" title="一、清空表"></a>一、清空表</h3><ol>
-<li><h4 id="清空单表"><a href="#清空单表" class="headerlink" title="清空单表"></a>清空单表</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TRUNCATE table table_name;</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="清空库中所有表"><a href="#清空库中所有表" class="headerlink" title="清空库中所有表"></a>清空库中所有表</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat(&#x27;TRUNCATE table &#x27;,table_name,&#x27;;&#x27;) from information_schema.TABLES where table_schema=&#x27;库名&#x27;;</span><br></pre></td></tr></table></figure>
+	  <ol>
+<li><p>查看所有容器 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>查询出要执行的sql语句，复制出来执行</li>
+<li><p><strong>CONTAINER ID:</strong> 容器 ID。</p>
+</li>
+<li><p><strong>IMAGE:</strong> 使用的镜像。</p>
+</li>
+<li><p><strong>COMMAND:</strong> 启动容器时运行的命令。</p>
+</li>
+<li><p><strong>CREATED:</strong> 容器的创建时间。</p>
+</li>
+<li><p><strong>STATUS:</strong> 容器状态。</p>
+<p>状态有7种：</p>
+<ul>
+<li>created（已创建）restarting（重启中）</li>
+<li>running 或 Up（运行中）removing（迁移中）</li>
+<li>paused（暂停）exited（停止）dead（死亡）</li>
 </ul>
 </li>
-<li><p>查询库中所有表</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select table_name from information_schema.tables where table_schema = &#x27;库名&#x27;;</span><br></pre></td></tr></table></figure></li>
-<li><p>查询表中所有字段</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name,column_comment </span><br><span class="line">FROM information_schema.COLUMNS </span><br><span class="line">WHERE table_name = &#x27;表名&#x27; </span><br><span class="line">AND table_schema = &#x27;库名&#x27;;</span><br></pre></td></tr></table></figure></li>
-<li><p>hjc</p>
+<li><p><strong>PORTS:</strong> 容器的端口信息和使用的连接类型（tcp\udp）。</p>
 </li>
+<li><p><strong>NAMES:</strong> 自动分配的容器名称。</p>
+</li>
+</ul>
+</li>
+<li><p>查看正在运行的容器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps </span><br></pre></td></tr></table></figure></li>
+<li><p>查看Docker客户端的所有命令选项</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker</span><br></pre></td></tr></table></figure></li>
+<li></li>
+<li></li>
 </ol>
 	  
 
@@ -88,17 +120,11 @@
 	
 	
 		
-	
+			
 		
 	
 		
-	
-		
-	
-		
-	
-		
-	
+			
 		
 	
 		
@@ -107,18 +133,34 @@
 	
 		
 			
+		
+	
+		
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
 			
 		
 	
 		
 	
+		
 	
 	
-		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+		<li class="prev"><a href="/2022/06/02/docker_mysql/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
 	
 	<li><a href="/"><i class="fa fa-archive"></i>Home</a></li>
 	
-		<li class="next disabled"><a>next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+		<li class="next"><a href="/2022/06/02/docker/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
 	
 </ul>
 </div>
