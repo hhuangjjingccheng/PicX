@@ -320,4 +320,20 @@
         <category>Java</category>
       </categories>
   </entry>
+  <entry>
+    <title>Redis常用命令</title>
+    <url>/2022/06/07/redis_%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="Window："><a href="#Window：" class="headerlink" title="Window："></a>Window：</h2><ol>
+<li><p>Redis启动命令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">redis-server.exe redis.windows.conf</span><br></pre></td></tr></table></figure></li>
+<li><p>window下启动redis服务报错：</p>
+<p>creating server tcp listening socket 127.0.0.1:6379: bind No error</p>
+<p>解决：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">redis-cli.exe</span><br><span class="line">shutdown</span><br><span class="line">exit</span><br><span class="line">redis-server.exe redis.windows.conf</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Redis</category>
+      </categories>
+  </entry>
 </search>

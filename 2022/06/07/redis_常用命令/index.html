@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Docker之安装Redis | 你好，世界</title>
+  <title>Redis常用命令 | 你好，世界</title>
   <meta name="author" content="大放厥词成">
   
-  <meta name="description" content="运行docker容器
-1docker run -itd --name redis -p 6379:6379 7614ae9453d1 --requirepass &amp;quot;password&amp;quot;
-
-
-–name redis：设置容器名称为redis
-
-7614ae9453d1：镜像id（IM">
+  <meta name="description" content="Window：
+Redis启动命令
+1redis-server.exe redis.windows.conf
+window下启动redis服务报错：
+creating server tcp listening socket 127.0.0.1:6379: bind No error
+解决：
+1234">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Docker之安装Redis"/>
+  <meta property="og:title" content="Redis常用命令"/>
   <meta property="og:site_name" content="你好，世界"/>
 
   
@@ -51,7 +51,7 @@
   <div class="container" id="container">
 	<div class="content">
 	  <div class="page-header">		
-  <h1><a class="brand" href="/">你好，世界</a><span class="split"></span><span class="title">Docker之安装Redis</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2022-06-02</span></h1>
+  <h1><a class="brand" href="/">你好，世界</a><span class="split"></span><span class="title">Redis常用命令</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2022-06-07</span></h1>
 </div>		
 
 <div class="row page">
@@ -64,20 +64,13 @@
 	  
 
 	  <!-- content -->
-	  <ol>
-<li><p>运行docker容器</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -itd --name redis -p 6379:6379 7614ae9453d1 --requirepass &quot;password&quot;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>–name redis：设置容器名称为redis</p>
-</li>
-<li><p>7614ae9453d1：镜像id（IMAGE ID）</p>
-</li>
-<li><p>–requirepass “password”：设置redis密码为 password</p>
-</li>
-</ul>
-</li>
-<li></li>
+	  <h2 id="Window："><a href="#Window：" class="headerlink" title="Window："></a>Window：</h2><ol>
+<li><p>Redis启动命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server.exe redis.windows.conf</span><br></pre></td></tr></table></figure></li>
+<li><p>window下启动redis服务报错：</p>
+<p>creating server tcp listening socket 127.0.0.1:6379: bind No error</p>
+<p>解决：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">redis-cli.exe</span><br><span class="line">shutdown</span><br><span class="line">exit</span><br><span class="line">redis-server.exe redis.windows.conf</span><br></pre></td></tr></table></figure></li>
 </ol>
 	  
 
@@ -92,40 +85,18 @@
 	
 	
 		
-	
-		
-	
-		
-			
-		
-	
-		
-	
-		
-			
-		
-	
-		
-			
-		
-	
-		
-	
-		
 			
 			
 		
 	
 		
-			
-			
-			
-		
-			
+	
 		
 	
 		
-			
+	
+		
+	
 		
 	
 		
@@ -134,13 +105,23 @@
 	
 		
 	
+		
+	
+		
+	
+		
+	
+		
+	
+		
 	
 	
-		<li class="prev"><a href="/2022/06/02/docker_%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
 	
 	<li><a href="/"><i class="fa fa-archive"></i>Home</a></li>
 	
-		<li class="next"><a href="/2022/06/02/docker_mysql/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+		<li class="next disabled"><a>next<i class="fa fa-arrow-circle-o-right"></i></a></li>
 	
 </ul>
 </div>
